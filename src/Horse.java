@@ -7,7 +7,6 @@ import java.util.List;
 
 public class Horse {
     public static void main(String[] args) {
-        int numberOfChoices = 0;
         String buffer = "";
         List<int[]> results;
 
