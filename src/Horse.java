@@ -8,7 +8,7 @@ import java.util.List;
 public class Horse {
     public static void main(String[] args) {
         String buffer = "";
-        List<int[]> results;
+        List<Position> results;
 
         // https://stackoverflow.com/questions/5868369/how-can-i-read-a-large-text-file-line-by-line-using-java
         try(BufferedReader input = new BufferedReader(new FileReader("input.txt"))) {
@@ -24,8 +24,8 @@ public class Horse {
         results = horseman.eat();
 
         try(FileWriter output = new FileWriter("output.txt")) {
-            for (int[] result: results) {
-                output.write((char)(result[0] + (int)'a') + ((char)(result[1] + (int)'1') + "\n"));
+            for (Position result: results) {
+                output.write((char)(result.first + (int)'a') + ((char)(result.second + (int)'1') + "\n"));
             }
         } catch (IOException ex) {
             System.out.println(ex.getMessage());
